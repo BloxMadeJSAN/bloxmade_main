@@ -4,4 +4,10 @@ class PagesController < ApplicationController
     
     def about
     end
+    
+    def kickstarter
+    end
+    
+    def partner
+    end
 end

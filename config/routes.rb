@@ -1,5 +1,7 @@
 SimplecodecastsSaas::Application.routes.draw do
   get '/about' => 'pages#about'
+  get '/kickstarter' => 'pages#kickstarter'
+  get '/partner' => 'pages#partner'
   root 'pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
