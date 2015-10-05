@@ -1,4 +1,5 @@
 SimplecodecastsSaas::Application.routes.draw do
+  resources :contacts
   get '/about' => 'pages#about'
   get '/kickstarter' => 'pages#kickstarter'
   get '/partner' => 'pages#partner'
