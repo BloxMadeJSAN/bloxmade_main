@@ -7,9 +7,19 @@ class ContactsController < ApplicationController
         @contact = Contact.new(contact_params)
         
         if @contact.save
-            redirect_to new_contact_path, notice: "Message Sent."
+            name = params[:contact][:name]
+            email = params[:contact][:email]
+            business = params[:contact][:business]
+            market = params[:contact][:market] 
+            body = params[:contact][:comments]
+            
+            ContactMailer.contact_email(name, email, business, market, body).deliver
+            
+            flash[:success] = "Message Sent!"
+            redirect_to new_contact_path
         else
-            redirect_to new_contact_path, notice: "Message Not Sent."
+            flash[:danger] = "Mssage Failed to send :-("
+            redirect_to new_contact_path
         end
     end
     
