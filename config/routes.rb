@@ -1,4 +1,5 @@
 SimplecodecastsSaas::Application.routes.draw do
+  devise_for :users
   resources :contacts
   get '/about' => 'pages#about'
   get '/kickstarter' => 'pages#kickstarter'
