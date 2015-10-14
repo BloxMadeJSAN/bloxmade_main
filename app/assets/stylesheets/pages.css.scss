@@ -5,6 +5,34 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+
+  /* Handle the widths */
+.cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+.cover-container {
+    width: 700px;
+    vertical-align: middle;
+  }
+}
+
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+.cover {
+  margin-top: 10%;
+  text-align: center;
+  padding: 0 20px;
+}
 
 
 /* CUSTOMIZE THE CAROUSEL
@@ -64,5 +92,10 @@
   line-height: 1;
   letter-spacing: -1px;
 }
+
+
+
+
+
 
 
